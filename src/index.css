@@ -1,3 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+p,span {
+  text-align: left;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +13,98 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #000;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+header {
+  padding: 12px 0;
+}
+
+.search input{
+  border-radius: 16px;
+  border: 4px solid #D3AE66;
+  width: 180px;
+  height: 38px;
+  padding-left: 10px;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.registation button + button {
+  margin-left: 64px;
+}
+
+.registation .sign-in {
+  width: max-content;
+}
+
+.registation .log-in {
+  width: 180px;
+  height: 38px;
+  background: #D3AE66;
+  border-radius: 16px;
+}
+
+.banner {
+  position: relative;
+  height: calc(100vh - 80px);
+}
+
+.header-back{
+  background-image: url(./assets/img/bg-banner.jpg);
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.grid-items {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.grid-image {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  object-position: center;
+}
+
+.catalog {
+  margin: 120px 0;
+}
+
+.grid-item {
+  display: grid;
+}
+
+.grid-item p {
+  display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    color: #7b7f89;
+    margin-bottom: 8px;
+    line-height: 1.5;
 }
